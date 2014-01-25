@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<!-- Copyright 2005 Macromedia, Inc. All rights reserved. -->
+<meta http-equiv="Content-Type" content="text/html; charset=">
+<title>iBee</title>
+<link rel="stylesheet" href="styles/emx_nav_right.css" type="text/css">
+<!--Link Icon-->
+<link rel="shortcut icon" href="images/iBee_Icon.ico" type="image/x-icon" />
+<script type="text/javascript">
+function changeImage(imagen)
+{
+document.getElementById('mapa').src = 'images/'+imagen
+
+}
+</script> 
+
+
+<script type="text/javascript">
+<!--
+var time = 3000;
+var numofitems = 7;
+
+//menu constructor
+function menu(allitems,thisitem,startstate){ 
+  callname= "gl"+thisitem;
+  divname="subglobal"+thisitem;  
+	this.numberofmenuitems = allitems;
+	this.caller = document.getElementById(callname);
+	this.thediv = document.getElementById(divname);
+	this.thediv.style.visibility = startstate;
+}
+				 
+//menu methods
+function ehandler(event,theobj){
+  for (var i=1; i<= theobj.numberofmenuitems; i++){
+	  var shutdiv =eval( "menuitem"+i+".thediv");
+    shutdiv.style.visibility="hidden";
+	}
+	theobj.thediv.style.visibility="visible";
+}
+				
+function closesubnav(event){
+  if ((event.clientY <48)||(event.clientY > 107)){
+    for (var i=1; i<= numofitems; i++){
+      var shutdiv =eval('menuitem'+i+'.thediv');
+			shutdiv.style.visibility='hidden';
+		}  
+	}
+}
+// -->
+</script>
+</head>
+<body  onmousemove="closesubnav(event);">
+<div class="skipLinks">skip to: <a href="#content">page content</a> | <a href="#pageNav">links on this page</a> | <a href="#globalNav">site navigation</a> | <a href="#siteInfo">footer (site information)</a> </div>
+<div id="masthead">
+  <h1 id="siteName">&nbsp;</h1>
+  <div id="utility"> Administrador | <a href="#">Logout</a> <!--| <a href="#">Utility Link</a> --></div>
+  <div id="globalNav"> <img alt="" src="images/gblnav_left.gif" height="32" width="4" id="gnl"> <img alt="" src="images/glbnav_right.gif" height="32" width="4" id="gnr">
+    <div id="globalLink"> <a href="#" id="gl1" class="glink" onmouseover="ehandler(event,menuitem1);">Apiar</a><a href="nuevo_zona.html" id="gl2" class="glink" onmouseover="ehandler(event,menuitem2);">Zonas</a><a href="#" id="gl3" class="glink" onmouseover="ehandler(event,menuitem3);">Mantenimiento</a><a href="#" id="gl4" class="glink" onmouseover="ehandler(event,menuitem4);">Enfermedades</a><a href="#" id="gl5" class="glink" onmouseover="ehandler(event,menuitem5);">Tareas</a><a href="#" id="gl6" class="glink" onmouseover="ehandler(event,menuitem6);">Monitoreo</a><a href="#" id="gl7" class="glink" onmouseover="ehandler(event,menuitem7);">Perfil</a><!--<a href="#" id="gl7" class="glink" onmouseover="ehandler(event,menuitem7);">global link</a>--> </div>
+    <!--end globalLinks-->
+    <!--<form id="search" action="">
+      <input name="searchFor" type="text" size="10">
+      <a href="">search</a>
+    </form>-->
+  </div>
+  <!-- end globalNav -->
+  <div id="subglobal1" class="subglobalNav"> <a href="nuevo_apiar.html">Nuevo Apiar</a> | <a href="nueva_colmena.html">Nuevo Colmena</a><!-- | <a href="#">Apiar subItem3</a>--> </div>
+  <div id="subglobal2" class="subglobalNav"> <a href="#">Flora</a> | <a href="#">Clima</a> | <a href="#">Agroquimicos</a> </div>
+  <div id="subglobal3" class="subglobalNav"> <a href="#">Mantenimiento Preventivo</a> | <a href="#">Mantenimiento Correctivo</a> | <a href="#">Mantenimiento Realizado</a> </div>
+  <div id="subglobal4" class="subglobalNav"> <a href="#">Enfermedades</a> | <a href="#"> Tratamientos</a> | <a href="#">Sintomas</a> </div>
+  <div id="subglobal5" class="subglobalNav"> <a href="nueva_actividad.html">Nueva Actividad</a> | <a href="#"> Ver Todas</a> | <a href="#">Tareas Pendientes</a> </div>
+  <div id="subglobal6" class="subglobalNav"> <a href="#">Monitoreo por Apiar</a> | <a href="monitoreo.html"> Monitoreo por Colmena</a> </div>
+  <div id="subglobal7" class="subglobalNav"> <a href="#">Datos Personales</a> | <a href="#">Cambiar Password</a> | <a href="#">Cambiar Imagen</a></div>
+  <div id="subglobal8" class="subglobalNav"> <a href="#">subglobal8 link</a> | <a href="#">subglobal8 link</a> | <a href="#">subglobal8 link</a> | <a href="#">subglobal8 link</a> | <a href="#">subglobal8 link</a> | <a href="#">subglobal8 link</a> | <a href="#">subglobal8 link</a> </div>
+</div>
+<!-- end masthead -->
+<div id="pagecell1">
+  <!--pagecell1-->
+  <img alt="" src="images/tl_curve_white.gif" height="6" width="6" id="tl"> <img alt="" src="images/tr_curve_white.gif" height="6" width="6" id="tr">
+  <div id="breadCrumb"> <a href="principal.html">Principal</a> / Monitoreo Por Colmena <!--/ <a href="#">Breadcrumb</a> /--> </div>
+  <div id="pageName">
+    <h2>iBee - Monitoreo y Control </h2>
+    <img src="images/icono.gif" alt="small logo" height="70"/> </div>
+  
+  <div id="content" style="margin:0;">
+
+	<!-- you can use tables or divs for the overall layout -->
+
+	<table id="contenedor" border="0" width="100%"  style="background-color: #999999; color:#CCCCCC; font-family: Arial,sans-serif; font-size:14px;">
+		<tr>
+		  <td><label>Apiar
+              <select name="select4" class="button">
+                <option>ACBF9870</option>
+              </select>
+          </label></td>
+		  <td><label>Colmena
+              <select name="select5" class="button">
+                <option>00004567</option>
+              </select>
+          </label></td>
+	  </tr>
+		<tr>
+			<td>
+				<img id="mapa" src="images/clima.jpeg" alt="" width="544" height="383">			</td>
+		  <td width="57%"><table width="566" height="391" border="0.1">
+            <tr>
+              <td height="23"><form name="form1" method="post" action="">
+                <label>Variable
+                <select name="select" class="button">
+                  <option>Temperatura</option>
+                                </select>
+                </label>
+              </form>              </td>
+            </tr>
+            <tr>
+              <td height="94"><img src="images/graf1.jpg" width="557" height="111"></td>
+            </tr>
+            
+            <tr>
+              <td height="23"><label>Variable
+                  <select name="select2" class="button">
+                    <option>Humedad</option>
+                  </select>
+              </label></td>
+            </tr>
+            <tr>
+              <td height="94"><img src="images/graf4.jpg" width="558" height="113"></td>
+            </tr>
+            
+            <tr>
+              <td height="23"><label>Variable
+                  <select name="select3" class="button">
+                    <option>Indice UV</option>
+                  </select>
+              </label></td>
+            </tr>
+            <tr>
+              <td height="98"><img src="images/graf2.jpg" width="559" height="113"></td>
+            </tr>
+            
+          </table></td>
+		</tr>
+	</table>
+
+
+    
+    <!--<div class="story">
+      <h3>Story Title</h3>
+      <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero. Cras venenatis. Aliquam posuere lobortis pede. Nullam fringilla urna id leo. Praesent aliquet pretium erat. Praesent non odio. Pellentesque a magna a mauris vulputate lacinia. Aenean viverra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Aliquam lacus. Mauris magna eros, semper a, tempor et, rutrum et, tortor. </p>
+      <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero. Cras venenatis. Aliquam posuere lobortis pede. Nullam fringilla urna id leo. Praesent aliquet pretium erat. Praesent non odio. Pellentesque a magna a mauris vulputate lacinia. Aenean viverra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Aliquam lacus. Mauris magna eros, semper a, tempor et, rutrum et, tortor. </p>
+    </div>-->
+    <!--<div class="story">
+      <table width="100%" cellpadding="0" cellspacing="0" summary="">
+        <tr valign="top">
+          <td class="storyLeft">
+            <p> <a href="#" class="capsule">Capsule Story</a> Cras enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut eu augue. Integer risus wisi, semper eu, congue quis, lobortis ut, massa. Vestibulum auctor vestibulum lectus. Vivamus neque. Cras lobortis. Aenean ut turpis eu libero volutpat euismod. <a href="#">Donec</a> eget lectus vitae ligula ornare tempor. Vivamus scelerisque lorem a elit. Sed id mauris. </p>
+          </td>
+          <td>
+            <p> <a href="#" class="capsule">Capsule Story</a> Cras enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut eu augue. Integer risus wisi, semper eu, congue quis, lobortis ut, massa. Vestibulum auctor vestibulum lectus. Vivamus neque. Cras lobortis. Aenean ut turpis eu libero volutpat euismod. <a href="#">Donec</a> eget lectus vitae ligula ornare tempor. Vivamus scelerisque lorem a elit. Sed id mauris. </p>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td class="storyLeft">
+            <p> <a href="#" class="capsule">Capsule Story</a> Cras enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut eu augue. Integer risus wisi, semper eu, congue quis, lobortis ut, massa. Vestibulum auctor vestibulum lectus. Vivamus neque. Cras lobortis. Aenean ut turpis eu libero volutpat euismod. <a href="#">Donec</a> eget lectus vitae ligula ornare tempor. Vivamus scelerisque lorem a elit. Sed id mauris. </p>
+          </td>
+          <td>
+            <p> <a href="#" class="capsule">Capsule Story</a> Cras enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut eu augue. Integer risus wisi, semper eu, congue quis, lobortis ut, massa. Vestibulum auctor vestibulum lectus. Vivamus neque. Cras lobortis. Aenean ut turpis eu libero volutpat euismod. <a href="#">Donec</a> eget lectus vitae ligula ornare tempor. Vivamus scelerisque lorem a elit. Sed id mauris. </p>
+          </td>
+        </tr>
+        <tr valign="top">
+          <td class="storyLeft">
+            <p> <a href="#" class="capsule">Capsule Story</a> Cras enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut eu augue. Integer risus wisi, semper eu, congue quis, lobortis ut, massa. Vestibulum auctor vestibulum lectus. Vivamus neque. Cras lobortis. Aenean ut turpis eu libero volutpat euismod. <a href="#">Donec</a> eget lectus vitae ligula ornare tempor. Vivamus scelerisque lorem a elit. Sed id mauris. </p>
+          </td>
+          <td>
+            <p> <a href="#" class="capsule">Capsule Story</a> Cras enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut eu augue. Integer risus wisi, semper eu, congue quis, lobortis ut, massa. Vestibulum auctor vestibulum lectus. Vivamus neque. Cras lobortis. Aenean ut turpis eu libero volutpat euismod. <a href="#">Donec</a> eget lectus vitae ligula ornare tempor. Vivamus scelerisque lorem a elit. Sed id mauris. </p>
+          </td>
+        </tr>
+      </table>
+    </div>-->
+  </div>
+  <!--end content -->
+  <div id="siteInfo"><!--<img src="" width="44" height="22"><a href="#">About Us</a> | <a href="#">Site Map</a> | <a href="#">Privacy Policy</a> | <a href="#">Contact Us</a> |--> 
+    <div align="right"><strong>&copy;2009 iBee</strong></div>
+  </div>
+</div>
+<!--end pagecell1-->
+<br>
+<script type="text/javascript">
+    <!--
+      var menuitem1 = new menu(7,1,"hidden");
+			var menuitem2 = new menu(7,2,"hidden");
+			var menuitem3 = new menu(7,3,"hidden");
+			var menuitem4 = new menu(7,4,"hidden");
+			var menuitem5 = new menu(7,5,"hidden");
+			var menuitem6 = new menu(7,6,"hidden");
+			var menuitem7 = new menu(7,7,"hidden");
+    // -->
+    </script>
+</body>
+</html>

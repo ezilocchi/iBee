@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Untitled Gantt Project" company="" webLink="http://" view-date="2009-03-16" view-index="0" gantt-divider-location="559" resource-divider-location="301" version="2.0">
+    <description/>
+    <view zooming-state="default:3" id="gantt-chart"/>
+    <view id="resource-table">
+        <field id="0" name="Nombre" width="55" order="0"/>
+        <field id="1" name="Función" width="44" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <calendar id="1" name="default">
+                <default-week sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+                <overriden-day-types/>
+                <days/>
+            </calendar>
+        </day-types>
+    </calendars>
+    <tasks>
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="1" name="Proyecto iBee" meeting="false" start="2009-03-16" duration="30" complete="0" priority="1" expand="true">
+            <task id="2" name="Gestión del Proyecto" meeting="false" start="2009-03-16" duration="1" complete="0" priority="1" expand="true">
+                <task id="3" name="Planificación del Proyecto" meeting="false" start="2009-03-16" duration="1" complete="0" priority="1" expand="true"/>
+                <task id="5" name="Plan de Métricas" meeting="false" start="2009-03-16" duration="1" complete="0" priority="1" expand="true"/>
+                <task id="6" name="Plan de Gestión de Riesgos" meeting="false" start="2009-03-16" duration="1" complete="0" priority="1" expand="true"/>
+                <task id="7" name="Plan de Gestión de Configuraciones" meeting="false" start="2009-03-16" duration="1" complete="0" priority="1" expand="true"/>
+                <task id="8" name="Plan de Calidad" meeting="false" start="2009-03-16" duration="1" complete="0" priority="1" expand="true"/>
+                <task id="9" name="Plan de Pruebas" meeting="false" start="2009-03-16" duration="1" complete="0" priority="1" expand="true"/>
+            </task>
+            <task id="10" name="WF Modelado de Negocio" meeting="false" start="2009-03-16" duration="4" complete="0" priority="1" expand="true">
+                <task id="12" name="Desarrollo" meeting="false" start="2009-03-16" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="13" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="13" name="Control - Revisión" meeting="false" start="2009-03-17" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="14" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="14" name="Ejecucción de Correcciones" meeting="false" start="2009-03-18" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="15" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="15" name="Fin WF Modelado de Negocio" color="#8cb6ce" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="true" start="2009-03-19" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="17" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="16" name="WF Requerimientos" meeting="false" start="2009-03-20" duration="5" complete="0" priority="1" expand="true">
+                <task id="17" name="Modelo de Use Case" meeting="false" start="2009-03-20" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="18" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="18" name="Modelo de Objetos del Dominio" meeting="false" start="2009-03-23" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="19" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="19" name="Control - Revisión" meeting="false" start="2009-03-24" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="20" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="20" name="Ejecución de Correcciones" meeting="false" start="2009-03-25" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="21" type="2" difference="0" hardness="Strong"/>
+                    <depend id="26" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="21" name="Fin WF de Requerimientos" color="#8cb6ce" shape="0,0,0,0,1,0,0,0,1,1,0,0,1,1,1,0" meeting="true" start="2009-03-26" duration="1" complete="0" priority="1" expand="true"/>
+            </task>
+            <task id="25" name="WF de Analisis" meeting="false" start="2009-03-26" duration="4" complete="0" priority="1" expand="true">
+                <task id="26" name="Diagrama de Colaboración" meeting="false" start="2009-03-26" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="27" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="27" name="Control - Revisión" meeting="false" start="2009-03-27" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="28" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="28" name="Ejecución de Correcciones" meeting="false" start="2009-03-30" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="29" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="29" name="Fin WF de Analisis" color="#8cb6ce" meeting="true" start="2009-03-31" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="30" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="30" name="WF de Diseño" meeting="false" start="2009-04-01" duration="6" complete="0" priority="1" expand="true">
+                <task id="31" name="Diagrama de Clases del Diseño" meeting="false" start="2009-04-01" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="33" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="33" name="Diagrama Entidad - Relación (Diseño DB)" meeting="false" start="2009-04-02" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="32" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="32" name="Diagrama de Estados" meeting="false" start="2009-04-03" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="34" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="34" name="Control - Revisión" meeting="false" start="2009-04-06" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="35" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="35" name="Ejecución de Correciones" meeting="false" start="2009-04-07" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="37" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="37" name="Fin WF de Diseño" color="#8cb6ce" meeting="true" start="2009-04-08" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="39" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="38" name="WF de Implementación" meeting="false" start="2009-04-09" duration="4" complete="0" priority="1" expand="true">
+                <task id="39" name="Construcción del Sistema de Información" meeting="false" start="2009-04-09" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="40" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="40" name="Control - Revisión" meeting="false" start="2009-04-10" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="41" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="41" name="Ejecucción de Correcciones" meeting="false" start="2009-04-13" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="42" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="42" name="Fin WF de Implementación" color="#8cb6ce" meeting="true" start="2009-04-14" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="44" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="43" name="WF de Prueba" meeting="false" start="2009-04-15" duration="6" complete="0" priority="1" expand="true">
+                <task id="44" name="Contrucción de Procedimientos de Prueba" meeting="false" start="2009-04-15" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="45" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="45" name="Ejecución de Procedimientos de Prueba" meeting="false" start="2009-04-16" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="46" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="46" name="Ejecución de Casos de Prueba" meeting="false" start="2009-04-17" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="47" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="47" name="Control - Revisión" meeting="false" start="2009-04-20" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="48" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="48" name="Ejecución de Correciones" meeting="false" start="2009-04-21" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="49" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="49" name="Fin WF Prueba" color="#8cb6ce" meeting="true" start="2009-04-22" duration="1" complete="0" priority="1" expand="true">
+                    <depend id="50" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="50" name="Despliegue" color="#8cb6ce" meeting="true" start="2009-04-23" duration="1" complete="0" priority="1" expand="true">
+                <depend id="51" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="51" name="Capacitación" color="#8cb6ce" meeting="true" start="2009-04-24" duration="1" complete="0" priority="1" expand="true"/>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="0" name="Thesis Team" function="SoftwareDevelopment:10" contacts="" phone=""/>
+    </resources>
+    <allocations/>
+    <vacations/>
+    <taskdisplaycolumns>
+        <displaycolumn property-id="tpd3" order="0" width="354"/>
+        <displaycolumn property-id="tpd6" order="1" width="37"/>
+        <displaycolumn property-id="tpd4" order="2" width="40"/>
+        <displaycolumn property-id="tpd5" order="3" width="39"/>
+    </taskdisplaycolumns>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>

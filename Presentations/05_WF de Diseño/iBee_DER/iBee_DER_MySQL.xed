@@ -1,0 +1,1043 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram version="1.0" type="MySQL" versionMajor="5" versionMinor="0">
+<Table id="0" name="Colmena" schema="" database="">
+<Column id="1" name="numeroColmena" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="2" name="denominacion" type="varchar" length="100" nulls="true"/>
+<Column id="3" name="fechaAlta" type="datetime" length="25" nulls="true"/>
+<Column id="4" name="fechaBaja" type="datetime" length="25" nulls="true"/>
+<Column id="5" name="numeroFamilia" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="6" name="idColmenaOriginal" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="7" name="idTipoMiel" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="8" name="numeroCajon" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="9" name="idPosicion" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+</Table>
+<Table id="10" name="TipoMiel" schema="" database="">
+<Column id="11" name="idTipoMiel" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="12" name="denominacion" type="varchar" length="5" nulls="true"/>
+<Column id="13" name="descripcion" type="varchar" length="100" nulls="true"/>
+</Table>
+<Table id="14" name="EstadoColmena" schema="" database="">
+<Column id="15" name="idEstadocolmena" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="16" name="denominacion" type="varchar" length="10" nulls="true"/>
+<Column id="17" name="descripcion" type="varchar" length="100" nulls="true"/>
+</Table>
+<Table id="18" name="HistorialEstadoColmena" schema="" database="">
+<Column id="19" name="idEstadoColmena" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="20" name="numeroColmena" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="21" name="fecha" type="datetime" length="25" nulls="true"/>
+<Column id="22" name="observaciones" type="varchar" length="25" nulls="true"/>
+</Table>
+<Table id="23" name="Apiar" schema="" database="">
+<Column id="24" name="idApiar" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="25" name="denominacion" type="varchar" length="100" nulls="true"/>
+<Column id="26" name="fechaCreacion" type="datetime" length="25" nulls="true"/>
+<Column id="27" name="fechaAlta" type="datetime" length="25" nulls="true"/>
+<Column id="28" name="fechaBaja" type="datetime" length="25" nulls="true"/>
+<Column id="29" name="estado" type="varchar" length="10" nulls="true"/>
+<Column id="30" name="idLayout" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="31" name="idUbicacion" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="32" name="idZona" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+</Table>
+<Table id="33" name="AsignacionColmena" schema="" database="">
+<Column id="34" name="idApiar" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="35" name="numeroColmena" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="36" name="fechaDesde" type="datetime" length="25" nulls="true"/>
+<Column id="37" name="fechaHasta" type="datetime" length="25" nulls="true"/>
+<Column id="38" name="observaciones" type="varchar" length="500" nulls="true"/>
+</Table>
+<Table id="39" name="Layout" schema="" database="">
+<Column id="40" name="idLayout" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="41" name="denominacion" type="varchar" length="100" nulls="true"/>
+<Column id="42" name="diseño" type="varchar" length="10" nulls="true"/>
+<Column id="43" name="ventaja" type="varchar" length="150" nulls="true"/>
+<Column id="44" name="observaciones" type="varchar" length="500" nulls="true"/>
+<Column id="45" name="fechaCreacion" type="datetime" length="25" nulls="true"/>
+<Column id="46" name="idPosicion" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+</Table>
+<Table id="47" name="Posicion" schema="" database="">
+<Column id="48" name="idPosicion" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="49" name="posHorizontal" type="varchar" length="25" nulls="true"/>
+<Column id="50" name="posVertical" type="varchar" length="25" nulls="true"/>
+</Table>
+<Table id="51" name="Ubicacion" schema="" database="">
+<Column id="52" name="idUbicacion" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="53" name="latitud" type="decimal" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+<CP name="SCALE">5</CP>
+</Column>
+<Column id="54" name="longitud" type="decimal" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+<CP name="SCALE">5</CP>
+</Column>
+<Column id="55" name="observaciones" type="varchar" length="500" nulls="true"/>
+</Table>
+<Table id="56" name="Familia" schema="" database="">
+<Column id="57" name="numeroFamilia" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="58" name="caracteristicas" type="varchar" length="200" nulls="true"/>
+<Column id="59" name="fechaAlta" type="datetime" length="25" nulls="true"/>
+<Column id="60" name="idEspecie" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="61" name="observaciones" type="varchar" length="500" nulls="true"/>
+</Table>
+<Table id="62" name="HistorialEstadoFamilia" schema="" database="">
+<Column id="63" name="numeroFamilia" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="64" name="idEstadoFamilia" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="65" name="fecha" type="datetime" length="25" nulls="true"/>
+<Column id="66" name="observaciones" type="varchar" length="200" nulls="true"/>
+</Table>
+<Table id="67" name="EstadoFamilia" schema="" database="">
+<Column id="68" name="idEstadoFamilia" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="69" name="denominacion" type="varchar" length="10" nulls="true"/>
+<Column id="70" name="descripcion" type="varchar" length="100" nulls="true"/>
+</Table>
+<Table id="71" name="Especie" schema="" database="">
+<Column id="72" name="idEspecie" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="73" name="denominacion" type="varchar" length="10" nulls="true"/>
+<Column id="74" name="descripcion" type="varchar" length="100" nulls="true"/>
+</Table>
+<Table id="75" name="MiembroFamilia" schema="" database="">
+<Column id="76" name="idMiembroFamilia" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="77" name="numeroFamilia" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="78" name="denominacion" type="varchar" length="100" nulls="true"/>
+<Column id="79" name="fechaNac" type="datetime" length="25" nulls="true"/>
+<Column id="80" name="fechaAlta" type="datetime" length="25" nulls="true"/>
+<Column id="81" name="fechaBaja" type="datetime" length="25" nulls="true"/>
+<Column id="82" name="idTipoAbeja" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+</Table>
+<Table id="83" name="TipoAbeja" schema="" database="">
+<Column id="84" name="idTipoAbeja" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="85" name="denominacion" type="varchar" length="10" nulls="true"/>
+<Column id="86" name="descripcion" type="varchar" length="100" nulls="true"/>
+<Column id="87" name="cuidados" type="varchar" length="200" nulls="true"/>
+<Column id="88" name="tiempoRecomendado" type="varchar" length="100" nulls="true"/>
+</Table>
+<Table id="89" name="Cajon" schema="" database="">
+<Column id="90" name="numeroCajon" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="91" name="descripcion" type="varchar" length="100" nulls="true"/>
+<Column id="92" name="estado" type="varchar" length="10" nulls="true"/>
+<Column id="93" name="tamaño" type="varchar" length="25" nulls="true"/>
+<Column id="94" name="usuarioFabricacion" type="varchar" length="25" nulls="true"/>
+<Column id="95" name="fechafabricacion" type="datetime" length="25" nulls="true"/>
+<Column id="96" name="observaciones" type="varchar" length="500" nulls="true"/>
+</Table>
+<Table id="97" name="Alza" schema="" database="">
+<Column id="98" name="numeroAlza" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="99" name="numeroCajon" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="100" name="descripcion" type="varchar" length="100" nulls="true"/>
+<Column id="101" name="estado" type="varchar" length="10" nulls="true"/>
+<Column id="102" name="tamaño" type="varchar" length="25" nulls="true"/>
+<Column id="103" name="observaciones" type="varchar" length="500" nulls="true"/>
+<Column id="104" name="idTipoAlza" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+</Table>
+<Table id="105" name="TipoAlza" schema="" database="">
+<Column id="106" name="idTipoAlza" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="107" name="denominacion" type="varchar" length="25" nulls="true"/>
+<Column id="108" name="descripcion" type="varchar" length="100" nulls="true"/>
+</Table>
+<Table id="109" name="Marco" schema="" database="">
+<Column id="110" name="numeroMarco" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="111" name="numeroAlza" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="112" name="numeroCajon" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="113" name="descripcion" type="varchar" length="100" nulls="true"/>
+<Column id="114" name="tamaño" type="varchar" length="25" nulls="true"/>
+<Column id="115" name="observaciones" type="varchar" length="500" nulls="true"/>
+</Table>
+<Table id="116" name="Enfermedad" schema="" database="">
+<Column id="117" name="idEnfermedad" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="118" name="denominacion" type="varchar" length="25" nulls="true"/>
+<Column id="119" name="descripcion" type="varchar" length="100" nulls="true"/>
+<Column id="120" name="duracionAproximada" type="varchar" length="25" nulls="true"/>
+<Column id="121" name="observaciones" type="varchar" length="500" nulls="true"/>
+<Column id="122" name="idCriticidad" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+</Table>
+<Table id="123" name="Criticidad" schema="" database="">
+<Column id="124" name="idCriticidad" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="125" name="denominacion" type="varchar" length="25" nulls="true"/>
+<Column id="126" name="descripcion" type="varchar" length="100" nulls="true"/>
+</Table>
+<Table id="127" name="EnfermedadEnColmena" schema="" database="">
+<Column id="128" name="numeroColmena" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="129" name="idEnfermedad" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="130" name="fechaDesde" type="datetime" length="25" nulls="true"/>
+<Column id="131" name="fechaHasta" type="datetime" length="25" nulls="true"/>
+<Column id="132" name="observaciones" type="varchar" length="500" nulls="true"/>
+</Table>
+<Table id="133" name="Tratamiento" schema="" database="">
+<Column id="134" name="idTratamiento" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="135" name="idEnfermedad" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="136" name="denominacion" type="varchar" length="25" nulls="true"/>
+<Column id="137" name="descripcion" type="varchar" length="100" nulls="true"/>
+<Column id="138" name="costeo" type="money" length="25" nulls="true"/>
+</Table>
+<Table id="139" name="Sintoma" schema="" database="">
+<Column id="140" name="idSintoma" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="141" name="idEnfermedad" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="142" name="denominacion" type="varchar" length="25" nulls="true"/>
+<Column id="143" name="descripcion" type="varchar" length="100" nulls="true"/>
+<Column id="144" name="observaciones" type="varchar" length="500" nulls="true"/>
+</Table>
+<Table id="145" name="Zona" schema="" database="">
+<Column id="146" name="idZona" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="147" name="zona" type="varchar" length="100" nulls="true"/>
+<Column id="148" name="estado" type="varchar" length="10" nulls="true"/>
+<Column id="149" name="fechaAlta" type="datetime" length="25" nulls="true"/>
+<Column id="150" name="fechaBaja" type="datetime" length="25" nulls="true"/>
+<Column id="151" name="usuarioAlta" type="varchar" length="10" nulls="true"/>
+<Column id="152" name="observaciones" type="varchar" length="500" nulls="true"/>
+<Column id="153" name="tieneAgroquimico" type="bit" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="154" name="tieneFlora" type="bit" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="155" name="tieneClima" type="bit" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+</Table>
+<Table id="156" name="UbicacionDeZona" schema="" database="">
+<Column id="157" name="idUbicacion" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="158" name="idZona" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="159" name="fecha" type="datetime" length="25" nulls="true"/>
+<Column id="160" name="Observaciones" type="varchar" length="500" nulls="true"/>
+</Table>
+<Table id="161" name="Agroquimico" schema="" database="">
+<Column id="162" name="idAgroquimico" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="163" name="idZona" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="164" name="idTipoAgroquimico" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="165" name="denominacion" type="varchar" length="25" nulls="true"/>
+<Column id="166" name="descripcion" type="varchar" length="100" nulls="true"/>
+<Column id="167" name="observaciones" type="varchar" length="500" nulls="true"/>
+</Table>
+<Table id="168" name="Flora" schema="" database="">
+<Column id="169" name="idFlora" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="170" name="idZona" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="171" name="idTipoFlora" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="172" name="denominacion" type="varchar" length="25" nulls="true"/>
+<Column id="173" name="descripcion" type="varchar" length="100" nulls="true"/>
+<Column id="174" name="observaciones" type="varchar" length="500" nulls="true"/>
+</Table>
+<Table id="175" name="Clima" schema="" database="">
+<Column id="176" name="idClima" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="177" name="idZona" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="178" name="fecha" type="date" length="25" nulls="true"/>
+<Column id="179" name="hora" type="time" length="25" nulls="true"/>
+</Table>
+<Table id="180" name="TipoAgroquimico" schema="" database="">
+<Column id="181" name="idTipoAgroquimico" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="182" name="denominacion" type="varchar" length="25" nulls="true"/>
+<Column id="183" name="descripcion" type="varchar" length="100" nulls="true"/>
+</Table>
+<Table id="184" name="TipoFlora" schema="" database="">
+<Column id="185" name="idTipoFlora" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="186" name="denominacion" type="varchar" length="25" nulls="true"/>
+<Column id="187" name="descripcion" type="varchar" length="100" nulls="true"/>
+</Table>
+<Table id="188" name="Alarma" schema="" database="">
+<Column id="189" name="idAlarma" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="190" name="idZona" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="191" name="denominacion" type="varchar" length="25" nulls="true"/>
+<Column id="192" name="descripcion" type="varchar" length="100" nulls="true"/>
+<Column id="193" name="origen" type="varchar" length="10" nulls="true"/>
+<Column id="194" name="fechaCreacion" type="datetime" length="25" nulls="true"/>
+<Column id="195" name="fechaInicio" type="datetime" length="25" nulls="true"/>
+<Column id="196" name="fechaFin" type="datetime" length="25" nulls="true"/>
+<Column id="197" name="idPeriodicidad" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="198" name="tipoAlarma" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+</Table>
+<Table id="199" name="Periodicidad" schema="" database="">
+<Column id="200" name="idPeriodicidad" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="201" name="periodicidad" type="varchar" length="25" nulls="true"/>
+</Table>
+<Table id="202" name="TipoActividad" schema="" database="">
+<Column id="203" name="codTipoActividad" type="char" length="5" nulls="false"/>
+<Column id="204" name="denominacion" type="varchar" length="25" nulls="true"/>
+<Column id="205" name="descripcion" type="varchar" length="100" nulls="true"/>
+</Table>
+<Table id="206" name="TipoTarea" schema="" database="">
+<Column id="207" name="codTipoActividad" type="char" length="5" nulls="false"/>
+<Column id="208" name="codTipoTarea" type="char" length="5" nulls="false"/>
+<Column id="209" name="denominacion" type="varchar" length="25" nulls="true"/>
+<Column id="210" name="descripcion" type="varchar" length="100" nulls="true"/>
+<Column id="211" name="usaActor" type="bit" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="212" name="usaGrupo" type="bit" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="213" name="usaCajon" type="bit" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="214" name="usaTratamiento" type="bit" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="215" name="usaEnfermedad" type="bit" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="216" name="usaSintoma" type="bit" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+</Table>
+<Table id="217" name="DatoDeRecoleccion" schema="" database="">
+<Column id="218" name="codDatoDeRecoleccion" type="char" length="5" nulls="false"/>
+<Column id="219" name="codTipoTarea" type="char" length="5" nulls="false"/>
+<Column id="220" name="codTipoActividad" type="char" length="5" nulls="false"/>
+<Column id="221" name="nombreDato" type="varchar" length="100" nulls="true"/>
+<Column id="222" name="idTipoDato" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="223" name="valoresPermitidos" type="varchar" length="250" nulls="true"/>
+<Column id="224" name="extension" type="varchar" length="25" nulls="true"/>
+</Table>
+<Table id="225" name="TipoDato" schema="" database="">
+<Column id="226" name="idTipoDato" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="227" name="descripcion" type="varchar" length="25" nulls="true"/>
+</Table>
+<Table id="228" name="Actividad" schema="" database="">
+<Column id="229" name="idActividad" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="230" name="codTipoActividad" type="char" length="5" nulls="false"/>
+<Column id="231" name="denominacion" type="varchar" length="25" nulls="true"/>
+<Column id="232" name="descripcion" type="varchar" length="100" nulls="true"/>
+<Column id="233" name="fechaCreacion" type="datetime" length="25" nulls="true"/>
+<Column id="234" name="fechaInicio" type="datetime" length="25" nulls="true"/>
+<Column id="235" name="fechaFin" type="datetime" length="25" nulls="true"/>
+<Column id="236" name="estado" type="varchar" length="10" nulls="true"/>
+<Column id="237" name="observaciones" type="varchar" length="500" nulls="true"/>
+<Column id="238" name="idApiar" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+</Table>
+<Table id="239" name="Tarea" schema="" database="">
+<Column id="240" name="idActividad" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="241" name="idTarea" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="242" name="codTipoActividad" type="char" length="5" nulls="false"/>
+<Column id="243" name="codTipoTarea" type="char" length="5" nulls="false"/>
+<Column id="244" name="descripcion" type="varchar" length="25" nulls="true"/>
+<Column id="245" name="idEstadoTarea" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="246" name="fechaRealizacion" type="datetime" length="25" nulls="true"/>
+<Column id="247" name="fechaPrevista" type="datetime" length="25" nulls="true"/>
+<Column id="248" name="observaciones" type="datetime" length="25" nulls="true"/>
+<Column id="249" name="legajoEmpleado" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="250" name="idColmena" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="251" name="idResidente" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="252" name="idFamilia" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="253" name="idCajon" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="254" name="idSintoma" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="255" name="idTratamiento" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="256" name="idEnfermedad" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+</Table>
+<Table id="257" name="EstadoTarea" schema="" database="">
+<Column id="258" name="idEstadoTarea" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="259" name="descripcion" type="varchar" length="25" nulls="true"/>
+</Table>
+<Table id="260" name="Empleado" schema="" database="">
+<Column id="261" name="legajo" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="262" name="nombre" type="varchar" length="50" nulls="true"/>
+<Column id="263" name="apellido" type="varchar" length="50" nulls="true"/>
+<Column id="264" name="estado" type="varchar" length="10" nulls="true"/>
+<Column id="265" name="idCargo" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="266" name="observaciones" type="varchar" length="500" nulls="true"/>
+</Table>
+<Table id="267" name="Cargo" schema="" database="">
+<Column id="268" name="idCargo" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="269" name="denominacion" type="varchar" length="25" nulls="true"/>
+<Column id="270" name="descripcion" type="varchar" length="100" nulls="true"/>
+</Table>
+<Table id="271" name="RecoleccionDato" schema="" database="">
+<Column id="272" name="idActividad" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="273" name="idTarea" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="274" name="idRecoleccionDato" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="275" name="codTipoActividad" type="char" length="5" nulls="false"/>
+<Column id="276" name="codTipoTarea" type="char" length="5" nulls="false"/>
+<Column id="277" name="codDatoDeRecoleccion" type="char" length="5" nulls="false"/>
+<Column id="278" name="valor" type="varchar" length="250" nulls="true"/>
+</Table>
+<Table id="279" name="EstadoAlarma" schema="" database="">
+<Column id="280" name="idEstadoAlarma" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="281" name="denominacion" type="varchar" length="25" nulls="true"/>
+<Column id="282" name="descripcion" type="varchar" length="25" nulls="true"/>
+</Table>
+<Table id="283" name="HistorialEstado" schema="" database="">
+<Column id="284" name="idEstadoAlarma" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="285" name="idAlarma" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="286" name="idZona" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="287" name="fecha" type="date" length="25" nulls="true"/>
+<Column id="288" name="hora" type="time" length="25" nulls="true"/>
+<Column id="289" name="solucion" type="varchar" length="25" nulls="true"/>
+</Table>
+<Table id="290" name="DetalleClima" schema="" database="">
+<Column id="291" name="idZona" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="292" name="idClima" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="293" name="idDetalleClima" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="294" name="idAtributo" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="295" name="valor" type="varchar" length="100" nulls="true"/>
+</Table>
+<Table id="296" name="Atributo" schema="" database="">
+<Column id="297" name="idAtributo" type="int" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="298" name="denominacion" type="varchar" length="25" nulls="true"/>
+<Column id="299" name="descripcion" type="varchar" length="100" nulls="true"/>
+</Table>
+<Relation id="300" name="REL_HistEstadoCol_Colmena" cardinality="-2" identifying="true" nulls="false">
+<FK>1</FK>
+<PK>20</PK>
+</Relation>
+<Relation id="301" name="REL_HistEStadoCol_Estado" cardinality="-2" identifying="true" nulls="false">
+<FK>15</FK>
+<PK>19</PK>
+</Relation>
+<Relation id="302" name="REL_Colmena_TipoMiel" cardinality="-2" identifying="false" nulls="false">
+<FK>11</FK>
+<PK>7</PK>
+</Relation>
+<Relation id="303" name="REL_AsigCol_Apiar" cardinality="-2" identifying="true" nulls="false">
+<FK>24</FK>
+<PK>34</PK>
+</Relation>
+<Relation id="304" name="REL_AsigCol_Colmena" cardinality="-2" identifying="true" nulls="false">
+<FK>1</FK>
+<PK>35</PK>
+</Relation>
+<Relation id="305" name="REL_Col_Layout" cardinality="-2" identifying="false" nulls="true">
+<FK>40</FK>
+<PK>30</PK>
+</Relation>
+<Relation id="306" name="REL_Lay_Pos" cardinality="-2" identifying="false" nulls="false">
+<FK>48</FK>
+<PK>46</PK>
+</Relation>
+<Relation id="307" name="REL_Col_Pos" cardinality="-2" identifying="false" nulls="true">
+<FK>48</FK>
+<PK>9</PK>
+</Relation>
+<Relation id="308" name="REL_Apiar_Ubic" cardinality="-2" identifying="false" nulls="true">
+<FK>52</FK>
+<PK>31</PK>
+</Relation>
+<Relation id="309" name="REL_HistEstFam_Fam" cardinality="-2" identifying="true" nulls="false">
+<FK>57</FK>
+<PK>63</PK>
+</Relation>
+<Relation id="310" name="REL_HistEstFam_EstFam" cardinality="-2" identifying="true" nulls="false">
+<FK>68</FK>
+<PK>64</PK>
+</Relation>
+<Relation id="311" name="REL_Colmena_Familia" cardinality="-2" identifying="false" nulls="false">
+<FK>57</FK>
+<PK>5</PK>
+</Relation>
+<Relation id="312" name="REL_Fam_Esp" cardinality="-2" identifying="false" nulls="false">
+<FK>72</FK>
+<PK>60</PK>
+</Relation>
+<Relation id="313" name="REL_Colmena_ColmenaOrig" cardinality="-2" identifying="false" nulls="false">
+<FK>1</FK>
+<PK>6</PK>
+</Relation>
+<Relation id="314" name="REL_MiembroFam_TipoAbeja" cardinality="-2" identifying="false" nulls="false">
+<FK>84</FK>
+<PK>82</PK>
+</Relation>
+<Relation id="315" name="REL_Alza_TipoAlza" cardinality="-3" identifying="false" nulls="false">
+<FK>106</FK>
+<PK>104</PK>
+</Relation>
+<Relation id="316" name="REL_Colmena_Cajon" cardinality="-2" identifying="false" nulls="false">
+<FK>90</FK>
+<PK>8</PK>
+</Relation>
+<Relation id="317" name="REL_Cajon_Alza" cardinality="-2" identifying="true" nulls="false">
+<FK>90</FK>
+<PK>99</PK>
+</Relation>
+<Relation id="318" name="REL_Alza_Marco" cardinality="-2" identifying="true" nulls="false">
+<FK>98</FK>
+<FK>99</FK>
+<PK>111</PK>
+<PK>112</PK>
+</Relation>
+<Relation id="319" name="REL_Enf_Crit" cardinality="-2" identifying="false" nulls="false">
+<FK>124</FK>
+<PK>122</PK>
+</Relation>
+<Relation id="320" name="REL_EnfEnCol_Colmena" cardinality="-2" identifying="true" nulls="false">
+<FK>1</FK>
+<PK>128</PK>
+</Relation>
+<Relation id="321" name="REL_EnfEnCol_Enfermedad" cardinality="-2" identifying="true" nulls="false">
+<FK>117</FK>
+<PK>129</PK>
+</Relation>
+<Relation id="322" name="REL_Enf_Sint" cardinality="-2" identifying="true" nulls="false">
+<FK>117</FK>
+<PK>141</PK>
+</Relation>
+<Relation id="323" name="REL_Enf_Trat" cardinality="-2" identifying="true" nulls="false">
+<FK>117</FK>
+<PK>135</PK>
+</Relation>
+<Relation id="324" name="REL_Ubic_UbicDeZona" cardinality="-2" identifying="true" nulls="false">
+<FK>52</FK>
+<PK>157</PK>
+</Relation>
+<Relation id="325" name="REL_UbicDeZona_Zona" cardinality="-2" identifying="true" nulls="false">
+<FK>146</FK>
+<PK>158</PK>
+</Relation>
+<Relation id="326" name="REL_TipoAgro_Agro" cardinality="-2" identifying="false" nulls="false">
+<FK>181</FK>
+<PK>164</PK>
+</Relation>
+<Relation id="327" name="REL_Zona_Agro" cardinality="-2" identifying="true" nulls="false">
+<FK>146</FK>
+<PK>163</PK>
+</Relation>
+<Relation id="328" name="REL_TpoFlora_Flora" cardinality="-2" identifying="false" nulls="false">
+<FK>185</FK>
+<PK>171</PK>
+</Relation>
+<Relation id="329" name="REL_Zona_Flora" cardinality="-2" identifying="true" nulls="false">
+<FK>146</FK>
+<PK>170</PK>
+</Relation>
+<Relation id="330" name="REL_Zona_Clima" cardinality="-2" identifying="true" nulls="false">
+<FK>146</FK>
+<PK>177</PK>
+</Relation>
+<Relation id="331" name="REL_Zona_Alarma" cardinality="-2" identifying="true" nulls="false">
+<FK>146</FK>
+<PK>190</PK>
+</Relation>
+<Relation id="332" name="REL_Period_Alarma" cardinality="-2" identifying="false" nulls="false">
+<FK>200</FK>
+<PK>197</PK>
+</Relation>
+<Relation id="333" name="REL_TpoAct_TpoTar" cardinality="-2" identifying="true" nulls="false">
+<FK>203</FK>
+<PK>207</PK>
+</Relation>
+<Relation id="334" name="REL_TpoDat_DatDeRec" cardinality="-2" identifying="false" nulls="false">
+<FK>226</FK>
+<PK>222</PK>
+</Relation>
+<Relation id="335" name="REL_TpoTar_DatDeRec" cardinality="-2" identifying="true" nulls="false">
+<FK>208</FK>
+<FK>207</FK>
+<PK>219</PK>
+<PK>220</PK>
+</Relation>
+<Relation id="336" name="REL_TpoAct_Act" cardinality="-2" identifying="false" nulls="false">
+<FK>203</FK>
+<PK>230</PK>
+</Relation>
+<Relation id="337" name="REL_Cargo_Emp" cardinality="-2" identifying="false" nulls="false">
+<FK>268</FK>
+<PK>265</PK>
+</Relation>
+<Relation id="338" name="REL_Emp_Tar" cardinality="-2" identifying="false" nulls="false">
+<FK>261</FK>
+<PK>249</PK>
+</Relation>
+<Relation id="339" name="REL_EstTar_Tar" cardinality="-2" identifying="false" nulls="false">
+<FK>258</FK>
+<PK>245</PK>
+</Relation>
+<Relation id="340" name="REL_Act_Tar" cardinality="-2" identifying="true" nulls="false">
+<FK>229</FK>
+<PK>240</PK>
+</Relation>
+<Relation id="341" name="REL_Tar_RecDato" cardinality="-2" identifying="true" nulls="false">
+<FK>240</FK>
+<FK>241</FK>
+<PK>272</PK>
+<PK>273</PK>
+</Relation>
+<Relation id="342" name="REL_TpoTar_Tar" cardinality="-2" identifying="false" nulls="false">
+<FK>207</FK>
+<FK>208</FK>
+<PK>242</PK>
+<PK>243</PK>
+</Relation>
+<Relation id="343" name="REL_DatoRecolec_RecolecDato" cardinality="-2" identifying="false" nulls="false">
+<FK>218</FK>
+<FK>219</FK>
+<FK>220</FK>
+<PK>275</PK>
+<PK>276</PK>
+<PK>277</PK>
+</Relation>
+<Relation id="344" name="REL_Fam_MiembroFam" cardinality="-2" identifying="true" nulls="false">
+<FK>57</FK>
+<PK>77</PK>
+</Relation>
+<Relation id="345" name="REL_HistEst_EstAlarma" cardinality="-2" identifying="true" nulls="false">
+<FK>284</FK>
+<PK>280</PK>
+<Text/>
+</Relation>
+<Relation id="346" name="REL_HistEst_Alarma" cardinality="-2" identifying="true" nulls="false">
+<FK>285</FK>
+<FK>286</FK>
+<PK>189</PK>
+<PK>190</PK>
+<Text/>
+</Relation>
+<Relation id="347" name="REL_Clima_DetClima" cardinality="-2" identifying="true" nulls="false">
+<FK>176</FK>
+<FK>177</FK>
+<PK>291</PK>
+<PK>292</PK>
+</Relation>
+<Relation id="348" name="REL_Atrib_DetCli" cardinality="-2" identifying="false" nulls="false">
+<FK>297</FK>
+<PK>294</PK>
+<Text/>
+</Relation>
+<Constraint table="0" name="PK_Colmena_01" type="PrimKey">
+<ConstraintColumn id="1"/>
+</Constraint>
+<Constraint table="10" name="PK_TipoMiel_01" type="PrimKey">
+<ConstraintColumn id="11"/>
+</Constraint>
+<Constraint table="14" name="PK_EstadoColmena_01" type="PrimKey">
+<ConstraintColumn id="15"/>
+</Constraint>
+<Constraint table="18" name="PK_HistEstadoColmena" type="PrimKey">
+<ConstraintColumn id="19"/>
+<ConstraintColumn id="20"/>
+</Constraint>
+<Constraint table="23" name="PK_Apiar_01" type="PrimKey">
+<ConstraintColumn id="24"/>
+</Constraint>
+<Constraint table="33" name="PK_AsigCol_01" type="PrimKey">
+<ConstraintColumn id="34"/>
+<ConstraintColumn id="35"/>
+</Constraint>
+<Constraint table="39" name="PK_Layout_01" type="PrimKey">
+<ConstraintColumn id="40"/>
+</Constraint>
+<Constraint table="47" name="PK_Posicion_01" type="PrimKey">
+<ConstraintColumn id="48"/>
+</Constraint>
+<Constraint table="51" name="PK_Ubicacion_01" type="PrimKey">
+<ConstraintColumn id="52"/>
+</Constraint>
+<Constraint table="56" name="PK_Familia_01" type="PrimKey">
+<ConstraintColumn id="57"/>
+</Constraint>
+<Constraint table="62" name="PK_HistEstFam_01" type="PrimKey">
+<ConstraintColumn id="63"/>
+<ConstraintColumn id="64"/>
+</Constraint>
+<Constraint table="67" name="PK_EstadoFamilia_01" type="PrimKey">
+<ConstraintColumn id="68"/>
+</Constraint>
+<Constraint table="71" name="PK_Especie_01" type="PrimKey">
+<ConstraintColumn id="72"/>
+</Constraint>
+<Constraint table="75" name="PK_MiembroFamilia_01" type="PrimKey">
+<ConstraintColumn id="76"/>
+<ConstraintColumn id="77"/>
+</Constraint>
+<Constraint table="83" name="PK_TipoAbeja_01" type="PrimKey">
+<ConstraintColumn id="84"/>
+</Constraint>
+<Constraint table="89" name="PK_Cajon_01" type="PrimKey">
+<ConstraintColumn id="90"/>
+</Constraint>
+<Constraint table="97" name="PK_Alza_01" type="PrimKey">
+<ConstraintColumn id="98"/>
+<ConstraintColumn id="99"/>
+</Constraint>
+<Constraint table="109" name="PK_Marco_01" type="PrimKey">
+<ConstraintColumn id="110"/>
+<ConstraintColumn id="111"/>
+<ConstraintColumn id="112"/>
+</Constraint>
+<Constraint table="116" name="PK_Enfermedad_01" type="PrimKey">
+<ConstraintColumn id="117"/>
+</Constraint>
+<Constraint table="123" name="PK_Criticidad_01" type="PrimKey">
+<ConstraintColumn id="124"/>
+</Constraint>
+<Constraint table="127" name="PK_EnfermedadEnColmena_01" type="PrimKey">
+<ConstraintColumn id="128"/>
+<ConstraintColumn id="129"/>
+</Constraint>
+<Constraint table="133" name="PK_Tratamiento_01" type="PrimKey">
+<ConstraintColumn id="134"/>
+<ConstraintColumn id="135"/>
+</Constraint>
+<Constraint table="139" name="PK_Sintoma_01" type="PrimKey">
+<ConstraintColumn id="140"/>
+<ConstraintColumn id="141"/>
+</Constraint>
+<Constraint table="145" name="PK_Zona_01" type="PrimKey">
+<ConstraintColumn id="146"/>
+</Constraint>
+<Constraint table="156" name="PK_UbicacionDeZona_01" type="PrimKey">
+<ConstraintColumn id="157"/>
+<ConstraintColumn id="158"/>
+</Constraint>
+<Constraint table="161" name="PK_Agroquimico_01" type="PrimKey">
+<ConstraintColumn id="162"/>
+<ConstraintColumn id="163"/>
+</Constraint>
+<Constraint table="168" name="PK_Flora_01" type="PrimKey">
+<ConstraintColumn id="169"/>
+<ConstraintColumn id="170"/>
+</Constraint>
+<Constraint table="175" name="PK_Clima_01" type="PrimKey">
+<ConstraintColumn id="176"/>
+<ConstraintColumn id="177"/>
+</Constraint>
+<Constraint table="180" name="PK_TipoAgroquimico_01" type="PrimKey">
+<ConstraintColumn id="181"/>
+</Constraint>
+<Constraint table="184" name="PK_TipoFlora_01" type="PrimKey">
+<ConstraintColumn id="185"/>
+</Constraint>
+<Constraint table="188" name="PK_Alarma_01" type="PrimKey">
+<ConstraintColumn id="189"/>
+<ConstraintColumn id="190"/>
+</Constraint>
+<Constraint table="199" name="PK_Periodicidad" type="PrimKey">
+<ConstraintColumn id="200"/>
+</Constraint>
+<Constraint table="202" name="PK_TipoActividad_01" type="PrimKey">
+<ConstraintColumn id="203"/>
+</Constraint>
+<Constraint table="206" name="PK_TipoTarea_01" type="PrimKey">
+<ConstraintColumn id="208"/>
+<ConstraintColumn id="207"/>
+</Constraint>
+<Constraint table="217" name="PK_DatoDeRecoleccion_01" type="PrimKey">
+<ConstraintColumn id="220"/>
+<ConstraintColumn id="219"/>
+<ConstraintColumn id="218"/>
+</Constraint>
+<Constraint table="225" name="PK_TipoDato_01" type="PrimKey">
+<ConstraintColumn id="226"/>
+</Constraint>
+<Constraint table="228" name="PK_Actividad_01" type="PrimKey">
+<ConstraintColumn id="229"/>
+</Constraint>
+<Constraint table="239" name="PK_Tarea_01" type="PrimKey">
+<ConstraintColumn id="240"/>
+<ConstraintColumn id="241"/>
+</Constraint>
+<Constraint table="257" name="PK_EstadoTarea" type="PrimKey">
+<ConstraintColumn id="258"/>
+</Constraint>
+<Constraint table="260" name="PK_Empleado_01" type="PrimKey">
+<ConstraintColumn id="261"/>
+</Constraint>
+<Constraint table="267" name="PK_Cargo_01" type="PrimKey">
+<ConstraintColumn id="268"/>
+</Constraint>
+<Constraint table="271" name="PK_RecoleccionDato" type="PrimKey">
+<ConstraintColumn id="272"/>
+<ConstraintColumn id="273"/>
+<ConstraintColumn id="274"/>
+</Constraint>
+<Constraint table="279" name="PK_EstadoAlarma" type="PrimKey">
+<ConstraintColumn id="280"/>
+</Constraint>
+<Constraint table="283" name="PK_HistorialEstado" type="PrimKey">
+<ConstraintColumn id="284"/>
+<ConstraintColumn id="285"/>
+<ConstraintColumn id="286"/>
+</Constraint>
+<Constraint table="290" name="PK_DetalleClima" type="PrimKey">
+<ConstraintColumn id="291"/>
+<ConstraintColumn id="292"/>
+<ConstraintColumn id="293"/>
+</Constraint>
+<Constraint table="296" name="PK_Atributo" type="PrimKey">
+<ConstraintColumn id="297"/>
+</Constraint>
+<Sheet name="Sin título 1" id="349" disp_at="true" disp_ph="true" disp_co="true" disp_rn="true">
+<Place id="168" visible="true">310,800,190,130</Place>
+<Place id="75" visible="true">830,410,190,140</Place>
+<Place id="318" visible="true" options="1010.0,560.0,190.0,140.0,1180.0,730.0,190.0,130.0,3,1090.0,700.0,1090.0,790.0,1180.0,790.0">500,0,0,0</Place>
+<Place id="320" visible="true" options="600.0,200.0,180.0,180.0,490.0,540.0,190.0,110.0,4,690.0,380.0,690.0,500.0,590.0,500.0,590.0,540.0">500,0,0,0</Place>
+<Place id="228" visible="true">1040,990,181,191</Place>
+<Place id="279" visible="true">770,1450,181,91</Place>
+<Place id="332" visible="true">500,0,0,0</Place>
+<Place id="348" visible="true">500,0,0,0</Place>
+<Place id="341" visible="true" options="1280.0,880.0,201.0,321.0,1550.0,1210.0,191.0,141.0,3,1390.0,1201.0,1390.0,1280.0,1550.0,1280.0">500,0,0,0</Place>
+<Place id="312" visible="true">500,0,0,0</Place>
+<Place id="39" visible="true">300,250,200,140</Place>
+<Place id="305" visible="true">500,0,0,0</Place>
+<Place id="331" visible="true" options="20.0,760.0,190.0,190.0,420.0,940.0,201.0,191.0,4,210.0,940.0,310.0,940.0,310.0,1000.0,420.0,1000.0">500,0,0,0</Place>
+<Place id="56" visible="true">860,160,220,110</Place>
+<Place id="335" visible="true" options="980.0,1310.0,171.0,191.0,1300.0,1390.0,191.0,141.0,4,1151.0,1420.0,1284.0,1420.0,1284.0,1440.0,1300.0,1440.0">500,0,0,0</Place>
+<Place id="314" visible="true">500,0,0,0</Place>
+<Place id="306" visible="true" options="420.0,410.0,180.0,70.0,300.0,250.0,200.0,140.0,4,420.0,450.0,420.0,455.0,380.0,455.0,380.0,390.0">500,0,0,0</Place>
+<Place id="290" visible="true">40,1390,161,111</Place>
+<Place id="310" visible="true">500,0,0,0</Place>
+<Place id="145" visible="true">20,760,190,190</Place>
+<Place id="47" visible="true">420,410,180,70</Place>
+<Place id="257" visible="true">1440,720,161,60</Place>
+<Place id="302" visible="true" options="650.0,10.0,180.0,70.0,600.0,200.0,180.0,180.0,4,740.0,80.0,740.0,140.0,690.0,140.0,690.0,200.0">500,0,0,0</Place>
+<Place id="67" visible="true">1220,170,180,70</Place>
+<Place id="51" visible="true">20,550,190,90</Place>
+<Place id="321" visible="true">500,0,0,0</Place>
+<Place id="105" visible="true">1270,550,180,70</Place>
+<Place id="308" visible="true" options="20.0,550.0,190.0,90.0,30.0,270.0,190.0,180.0,4,140.0,550.0,140.0,570.0,110.0,570.0,110.0,450.0">500,0,0,0</Place>
+<Place id="347" visible="true" options="210.0,1200.0,190.0,91.0,40.0,1390.0,161.0,111.0,3,300.0,1291.0,300.0,1390.0,201.0,1390.0">500,0,0,0</Place>
+<Place id="339" visible="true" options="1440.0,720.0,161.0,60.0,1280.0,880.0,201.0,321.0,3,1550.0,780.0,1550.0,930.0,1481.0,930.0">500,0,0,0</Place>
+<Place id="109" visible="true">1180,730,190,130</Place>
+<Place id="116" visible="true">550,770,220,130</Place>
+<Place id="317" visible="true" options="710.0,580.0,200.0,140.0,1010.0,560.0,190.0,140.0,2,910.0,620.0,1010.0,620.0">500,0,0,0</Place>
+<Place id="10" visible="true">650,10,180,70</Place>
+<Place id="202" visible="true">850,1200,171,71</Place>
+<Place id="62" visible="true">1120,20,200,90</Place>
+<Place id="336" visible="true">500,0,0,0</Place>
+<Place id="139" visible="true">840,890,190,110</Place>
+<Place id="225" visible="true">1570,1470,161,60</Place>
+<Place id="329" visible="true">500,0,0,0</Place>
+<Place id="156" visible="true">280,540,190,90</Place>
+<Place id="338" visible="true" options="1600.0,800.0,181.0,121.0,1280.0,880.0,201.0,321.0,3,1630.0,921.0,1630.0,1010.0,1481.0,1010.0">500,0,0,0</Place>
+<Place id="271" visible="true">1550,1210,191,141</Place>
+<Place id="127" visible="true">490,540,190,110</Place>
+<Place id="206" visible="true">980,1310,171,191</Place>
+<Place id="311" visible="true">500,0,0,0</Place>
+<Place id="300" visible="true">500,0,0,0</Place>
+<Place id="313" visible="true">500,0,0,0</Place>
+<Place id="83" visible="true">1190,410,220,110</Place>
+<Place id="133" visible="true">830,740,180,110</Place>
+<Place id="307" visible="true" options="420.0,410.0,180.0,70.0,600.0,200.0,180.0,180.0,3,600.0,450.0,660.0,450.0,660.0,380.0">500,0,0,0</Place>
+<Place id="346" visible="true" options="640.0,1280.0,171.0,121.0,420.0,940.0,201.0,191.0,4,720.0,1280.0,720.0,1250.0,570.0,1250.0,570.0,1131.0">500,0,0,0</Place>
+<Place id="180" visible="true">10,1270,180,70</Place>
+<Place id="188" visible="true">420,940,201,191</Place>
+<Place id="199" visible="true">680,1170,161,60</Place>
+<Place id="342" visible="true" options="980.0,1310.0,171.0,191.0,1280.0,880.0,201.0,321.0,3,1151.0,1420.0,1340.0,1420.0,1340.0,1201.0">500,0,0,0</Place>
+<Place id="319" visible="true" options="670.0,1020.0,180.0,70.0,550.0,770.0,220.0,130.0,4,760.0,1020.0,760.0,960.0,650.0,960.0,650.0,900.0">500,0,0,0</Place>
+<Place id="123" visible="true">670,1020,180,70</Place>
+<Place id="325" visible="true" options="20.0,760.0,190.0,190.0,280.0,540.0,190.0,90.0,4,120.0,760.0,120.0,730.0,370.0,730.0,370.0,630.0">500,0,0,0</Place>
+<Place id="71" visible="true">1170,310,180,70</Place>
+<Place id="0" visible="true">600,200,180,180</Place>
+<Place id="97" visible="true">1010,560,190,140</Place>
+<Place id="315" visible="true">500,0,0,0</Place>
+<Place id="340" visible="true">500,0,0,0</Place>
+<Place id="14" visible="true">80,30,180,70</Place>
+<Place id="184" visible="true">380,670,180,70</Place>
+<Place id="333" visible="true" options="850.0,1200.0,171.0,71.0,980.0,1310.0,171.0,191.0,5,940.0,1271.0,940.0,1365.0,955.0,1365.0,955.0,1380.0,980.0,1380.0">266,-9,0,0</Place>
+<Place id="33" visible="true">260,130,190,110</Place>
+<Place id="161" visible="true">10,1060,190,130</Place>
+<Place id="304" visible="true">500,0,0,0</Place>
+<Place id="326" visible="true" options="10.0,1270.0,180.0,70.0,10.0,1060.0,190.0,130.0,4,110.0,1270.0,110.0,1210.0,110.0,1210.0,110.0,1190.0">500,0,0,0</Place>
+<Place id="267" visible="true">1520,1110,171,71</Place>
+<Place id="239" visible="true">1280,880,201,321</Place>
+<Place id="89" visible="true">710,580,200,140</Place>
+<Place id="330" visible="true" options="20.0,760.0,190.0,190.0,210.0,1200.0,190.0,91.0,6,160.0,950.0,160.0,990.0,260.0,990.0,260.0,1090.0,310.0,1090.0,310.0,1200.0">500,0,0,0</Place>
+<Place id="322" visible="true">500,0,0,0</Place>
+<Place id="260" visible="true">1600,800,181,121</Place>
+<Place id="344" visible="true">500,0,0,0</Place>
+<Place id="324" visible="true" options="20.0,550.0,190.0,90.0,280.0,540.0,190.0,90.0,2,210.0,630.0,320.0,630.0">500,0,0,0</Place>
+<Place id="337" visible="true" options="1520.0,1110.0,171.0,71.0,1600.0,800.0,181.0,121.0,4,1630.0,1110.0,1630.0,1065.0,1690.0,1065.0,1690.0,921.0">500,0,0,0</Place>
+<Place id="23" visible="true">30,270,190,180</Place>
+<Place id="316" visible="true" options="710.0,580.0,200.0,140.0,600.0,200.0,180.0,180.0,4,810.0,580.0,810.0,530.0,730.0,530.0,730.0,380.0">500,0,0,0</Place>
+<Place id="343" visible="true">500,0,0,0</Place>
+<Place id="328" visible="true" options="380.0,670.0,180.0,70.0,310.0,800.0,190.0,130.0,6,470.0,740.0,470.0,760.0,390.0,760.0,390.0,770.0,390.0,770.0,390.0,800.0">500,0,0,0</Place>
+<Place id="323" visible="true">500,0,0,0</Place>
+<Place id="345" visible="true" options="640.0,1280.0,171.0,121.0,770.0,1450.0,181.0,91.0,3,700.0,1401.0,700.0,1480.0,770.0,1480.0">500,0,0,0</Place>
+<Place id="283" visible="true">640,1280,171,121</Place>
+<Place id="303" visible="true" options="30.0,270.0,190.0,180.0,260.0,130.0,190.0,110.0,3,120.0,270.0,120.0,170.0,260.0,170.0">500,0,0,0</Place>
+<Place id="175" visible="true">210,1200,190,91</Place>
+<Place id="301" visible="true" options="80.0,30.0,180.0,70.0,380.0,20.0,190.0,90.0,4,260.0,70.0,320.0,70.0,320.0,70.0,380.0,70.0">500,0,0,0</Place>
+<Place id="309" visible="true" options="860.0,160.0,220.0,110.0,1120.0,20.0,200.0,90.0,3,970.0,160.0,970.0,60.0,1120.0,60.0">500,0,0,0</Place>
+<Place id="327" visible="true" options="20.0,760.0,190.0,190.0,10.0,1060.0,190.0,130.0,2,110.0,950.0,110.0,1060.0">500,0,0,0</Place>
+<Place id="296" visible="true">410,1430,171,71</Place>
+<Place id="217" visible="true">1300,1390,191,141</Place>
+<Place id="334" visible="true" options="1570.0,1470.0,161.0,60.0,1300.0,1390.0,191.0,141.0,5,1670.0,1470.0,1670.0,1420.0,1581.0,1420.0,1581.0,1450.0,1491.0,1450.0">491,-23,0,-42</Place>
+<Place id="18" visible="true">380,20,190,90</Place>
+</Sheet>
+<Settings sheet="349" zoom="1.0"/>
+</Diagram>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="mm_new_doc_type" value="stationery" />
+	<infoitem key="mm_new_doc_name" value="Nav dcha Halo" />
+	<infoitem key="mm_new_doc_desc" value="Diseño CSS Halo con navegación a la derecha" />
+	<infoitem key="mm_new_doc_external_command" value="Commands/mm_pagedesigns.htm" />
+	<infoitem key="mm_new_doc_preview" value="Halo_rightNav.gif" />
+</info>
